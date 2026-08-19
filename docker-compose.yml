@@ -1,0 +1,9 @@
+services:
+  bot:
+    image: ghcr.io/luthfirahmn09/scrap-nomor-ai:latest
+    container_name: scrap-nomor-ai
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - HEADLESS=true
